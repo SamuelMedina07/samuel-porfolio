@@ -1,0 +1,51 @@
+---
+ const personalImageAlt = "Samuel Ernesto Medina"
+import SocialPill from "@/components/SocialPill.astro"
+import Instagram from "./icons/Instagram.astro"
+import Youtube from "./icons/Youtube.astro"
+import GitHub from "./icons/GitHub.astro"
+---
+
+<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+  <!-- Imagen primero -->
+  <div class="flex flex-col items-center order-1 md:order-1">
+    <img
+      width="200"
+      height="200"
+      src="/public/samuel.webp"
+      alt={personalImageAlt}
+      class="object-cover w-64 h-full p-1 rotate-0 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+      style="object-position: 50% 50%"
+    />
+
+    <!-- Social Pills debajo de la imagen -->
+    <div  class="flex flex-col items-center w-full gap-2 mt-4 sm:flex-row sm:flex-wrap sm:justify-center">
+      <SocialPill href="https://www.instagram.com/samuelernestomedina/">
+        <Instagram class="size-4" />
+        samuelernestomedina
+      </SocialPill>
+
+      <SocialPill href="https://github.com/SamuelMedina07">
+        <GitHub class="size-4" />
+        samuelmedina07
+      </SocialPill>
+
+      <SocialPill href="https://www.youtube.com/@SamuelEBand">
+        <Youtube class="size-4" />
+        samueleband
+      </SocialPill>
+    </div>
+  </div>
+
+  <!-- Texto a la derecha en desktop, debajo en mobile -->
+  <div class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-2 text-justify">
+    <p>
+      Soy Samuel Ernesto Medina Ramírez, tengo 25 años y soy desarrollador en formación con una profunda pasión por la tecnología. Comencé a programar a los 15 años, y desde entonces he dedicado mi vida a <strong>aprender, crear y compartir soluciones</strong> que aporten valor.
+    </p>
+
+    <p>
+      Actualmente estudio <strong>Ingeniería en Computación</strong> y soy becado por <strong>Alura Latam</strong>, donde he fortalecido mis habilidades en desarrollo web, lógica de programación y diseño de interfaces. He colaborado en <strong> proyectos universitarios presentando propuestas tecnológicas a instituciones educativas</strong>, y también he trabajado en el <strong>diseño de logotipos y sitios web </strong>para clientes y amigos, combinando creatividad con funcionalidad.
+    </p>
+ 
+  </div>
+</article>

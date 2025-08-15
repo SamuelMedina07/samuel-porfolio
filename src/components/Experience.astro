@@ -1,0 +1,45 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Actualmente",
+    title: "Freelancer",
+    company: "",
+    description:
+      "Diseño y desarrollo de sitios web personalizados para clientes individuales y pequeños negocios. También colaboro en la creación de logotipos, identidad visual y soluciones digitales adaptadas a las necesidades específicas de cada proyecto.",
+    link: "",
+  },
+  {
+    date: "Diciembre 2024 - Junio 2023",
+    title: "Maestro de Matemáticas y Lenguas Extranjeras",
+    company: "Escuela e Instituto Bosques de Jucutuma",
+    description:
+      "Impartí clases de matemáticas y de inglés a estudiantes de nivel básico y medio. Desarrollé materiales didácticos interactivos, enfoqué la enseñanza en el pensamiento lógico y la comunicación efectiva, y promoví el aprendizaje activo en el aula.",
+  },
+  {
+    date: "Mayo 2023 - Enero 2022",
+    title: "Maestro de Computación",
+    company: "Jucutuma Bilingual School",
+    description:
+      "Enseñé fundamentos de informática, programación básica y herramientas digitales a estudiantes bilingües. Fomenté el pensamiento computacional y el uso responsable de la tecnología, integrando proyectos prácticos y colaborativos.",
+  },
+  {
+    date: "Noviembre 2018 - Febrero 2017",
+    title: "Maestro de Piano",
+    company: "Escuela de Música Shalom",
+    description:
+      "Brindé clases personalizadas de piano a niños y jóvenes, enfocándome en técnica, teoría musical y expresión artística. Preparé estudiantes para presentaciones y recitales, cultivando disciplina y pasión por la música.",
+  },
+];
+
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
