@@ -4,6 +4,9 @@ import robotsTxt from 'astro-robots-txt';
 
 // https://astro.build/config
 export default defineConfig({
+  build: {
+    assetsPrefix: './',
+  },
   integrations: [tailwind(), robotsTxt()],
   site: 'https://samuelmedina07.github.io/samuel-porfolio/',
   base: '/samuel-porfolio/',
